@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+</head>
+<body style="text-align:center;font-family:Arial;margin-top:100px;">
+
+    <h1>Quiz Result</h1>
+
+    <h2 id="result"></h2>
+
+    <button onclick="window.location.href='index.html'">
+        Back to Home
+    </button>
+
+    <script>
+        let score = localStorage.getItem("score");
+        document.getElementById("result").innerHTML =
+        "Your Score: " + score;
+    </script>
+
+</body>
+</html>
