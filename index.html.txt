@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎓 Online Quiz System</h1>
+
+<!-- LOGIN -->
+<div id="auth">
+    <input id="user" placeholder="Email / Username"><br>
+    <input id="pass" type="password" placeholder="Password"><br>
+    <button onclick="signup()">Signup</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- TEACHER -->
+<div id="teacher" class="hidden">
+    <h2>Teacher Panel</h2>
+    <input id="q" placeholder="Question"><br>
+    <input id="a" placeholder="Option A"><br>
+    <input id="b" placeholder="Option B"><br>
+    <input id="c" placeholder="Option C"><br>
+    <input id="d" placeholder="Option D"><br>
+    <input id="correct" placeholder="Correct (a/b/c/d)"><br>
+
+    <button onclick="addQuestion()">Add Question</button>
+    <button onclick="generateAI()">Generate AI Questions</button>
+    <button onclick="viewResults()">View Results</button>
+
+    <div id="allResults"></div>
+</div>
+
+<!-- STUDENT -->
+<div id="student" class="hidden">
+
+    <h2>Quiz</h2>
+
+    <h3>⏱ Time Left: <span id="time">30</span>s</h3>
+
+    <div id="quiz"></div>
+
+    <button onclick="next()">Next</button>
+
+    <h3 id="score"></h3>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="hidden">
+        <h2>📊 Dashboard</h2>
+        <p id="finalScore"></p>
+        <p id="percentage"></p>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <h2>🏆 Leaderboard</h2>
+    <ol id="leaderboard"></ol>
+
+    <!-- CHART -->
+    <canvas id="chart"></canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
